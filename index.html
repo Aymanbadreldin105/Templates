@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leon | Template One</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header >
+        <div class="container">
+            <a href="#" class="logo">
+            	<img src="logo.png" alt="Logo" ></a>
+            <nav>
+            	<i class="fas fa-bars toggle-menu"></i>
+                <ul class="Menu">
+                	<li><a class="active"href="#home">Home</a></li>
+                	 <li><a href="#features">Features</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolios">Portfolios</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="form">
+                	<i class="fas fa-search"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Landing Section-------------------------------------- -->
+    <section class="landing">
+       <div class="overlay"></div>
+       <div class="text">
+       	<div class="content">
+       		<h2>Hello World! <br>
+       		We Are Kasper We Make Art</h2>
+       		<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+       	</div>
+       </div>
+       <i class="fas fa-angle-left fa-x3 left"></i>
+       <i class="fas fa-angle-right fa-x3 right"></i>
+       <ul>
+       	<li></li>
+       	<li class="active"></li>	
+       	<li></li>
+       </ul>
+    </section>
+    <!-- End Landing Section------------------------------------- -->
+    <!-- Services Section------------------------------------ -->
+    <section class="services">
+    	<div class="container">
+    		<div class="h-text">
+    			<h2>SERVICES</h2>
+    			<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+    		</div>
+    		<div class="cards">
+    		<div class="serv-card">
+    			<i class="fas fa-desktop fa-3x"></i>	
+    			<div class="text">
+    				<h2>Vorem amet intuitive</h2>
+    				<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.
+    				</p>
+    			</div>
+    		</div>
+    			<div class="serv-card">
+    			<i class="fas fa-cog fa-3x"></i>	
+    			<div class="text">
+    				<h2>Vorem amet intuitive</h2>
+    				<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.
+    				</p>
+    			</div>
+    		</div>
+    			<div class="serv-card">
+    			<i class="fas fa-camera fa-3x"></i>	
+    			<div class="text">
+    				<h2>Vorem amet intuitive</h2>
+    				<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.
+    				</p>
+    			</div>
+    		</div>	<div class="serv-card">
+    			<i class="fas fa-pencil-ruler fa-3x"></i>	
+    			<div class="text">
+    				<h2>Vorem amet intuitive</h2>
+    				<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.
+    				</p>
+    			</div>
+    		</div>
+    		</div>
+    	</div>
+    </section>
+   <!-- End Services Section--------------------------------- -->
+   <!--  Design---------------------------------------------- -->
+   	<section class="design">
+   				 <div class="overlay"></div>
+	   			<img class="img" src="https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/mobile.png">
+	   			<ul>
+	   				<p>Our Design Comes With...</p>
+	   				<li>Responsive Design</li>
+	   				<li>Modern And Clean Design</li>
+	   				<li>Clean Code</li>
+	   				<li>Browser Friendly</li>
+	   			</ul>
+   	</section>
+   <!-- End Design------------------------------------------- -->
+   <!-- Portfolio Section------------------------------------ -->
+   
+    </section>
+    <section id="contact" class="contact item">
+    	
+    </section>
+    <footer>
+    	<p>&copy; 2021 <span>Kasber</span> All Right Reserved</p>
+    </footer>
+<script>
+	let toggle = document.querySelector(".toggle-menu");
+	let menu   = document.querySelector(".Menu");
+	toggle.addEventListener("click", display_menu);
+	function display_menu(){
+		if(menu.style.display === "flex"){
+		menu.style.display = "none";}
+		else{
+			menu.style.display = "flex";
+		}
+	}
+	let landing = document.querySelector(".landing");
+	let left = document.querySelector(".left");
+	let right   = document.querySelector(".right");
+	let images=['url(images.jpg)','url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/landing.jpg)','url(barred-owl.webp)'];
+	let index=0;
+	function updateBackground() {
+  landing.style.backgroundImage = images[index];
+}
+    left.addEventListener('click',()=>{
+      index= (index - 1 + images.length) % images.length;
+  updateBackground();
+    });
+    right.addEventListener('click',()=>{
+      index= (index + 1 ) % images.length;
+  updateBackground();
+    });
+</script>
+</body>
+</html>

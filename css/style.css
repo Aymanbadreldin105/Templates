@@ -1,0 +1,440 @@
+:root{
+	--main-color:#19c8fa;
+	--secand-color:rgb(15 116 143 / 70%);
+	--padding: 20px;
+	--margin: 20px; 
+
+}
+*{
+	padding: 0px;
+	margin: 0px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+html{
+	scroll-behavior :smooth;
+}
+
+body{
+	overflow-x: hidden;
+	font-family:Sans-serif;
+	background-color :white;
+}
+.container{
+	padding-left:15px;
+	padding-right: 15px;  
+	margin-left  :auto;
+	margin-right: auto;
+}
+
+@media(min-width: 768px){
+	.container{
+		width : 750px;
+	}
+}
+
+@media(min-width: 992px){
+	.container{
+		width : 970px;
+	}
+}
+
+@media(min-width: 1200px){
+	.container{
+		width : 1170px;
+	}
+}
+.h-text{
+	text-align: -webkit-center;
+    padding: 30px;
+    margin: var(--margin);
+}
+.h-text h2{
+	position: relative;
+	font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+}
+.h-text h2:before{
+	position: absolute;
+    content: "";
+    left: 50%;
+    bottom:-30px;
+    transform: translateX(-50%);
+    width:140px;
+    height: 2px;
+    background-color: black;
+}
+.h-text h2:after{
+	position: absolute;
+    content: "";
+    left: 50%;
+    bottom: -50px;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #444;
+    border-radius: 50%;
+    background-color: white;}
+
+.h-text p{
+	font-size: 20px;
+    width: 550px;
+    margin: 0 auto 4rem;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+}
+header{
+position: absolute;
+width: 100%;
+left: 0;
+z-index: 2;
+}
+header .container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
+min-height: 97px;
+
+}
+header .container::after{
+	content: "";
+	width: calc(100% - 30px);
+	height: 2px;
+	background-color: #a2a2a2;
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+}
+header .container .logo img{
+	height: 40px;
+}
+header .container nav{
+	flex:1;
+	display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header .container nav .toggle-menu{
+	display: none;
+	color: white;
+	padding-left: 15px;
+	margin-right: 20px;
+	font-size: 24px;
+
+}
+@media(max-width: 768px){
+header .container nav .toggle-menu{
+	display: flex;
+	margin-right:15px; 
+}	
+}
+header .container nav .Menu{
+	display: flex;
+	list-style: none;
+}
+@media(max-width: 768px){
+header .container nav .Menu{
+	display: none;
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    flex-direction: column;
+    width: calc(100% - 30px);
+    background-color: rgb(0 0 0 / 70%);
+}
+}
+header .container nav .Menu li a{
+	display: block;
+	text-decoration: none;
+	font-size: 14px;
+	color: white;
+	transition: 0.3s esae;
+	padding: 40px 10px;
+	position: relative;
+	z-index: 3;
+}
+@media(max-width:768px){
+	header .container nav .Menu li a{
+	display:flex;
+	padding:15px;
+}
+}
+header .container nav .Menu li a.active,
+header .container nav .Menu li a:hover{
+	color: var(--main-color);
+	border-bottom: 3px solid var(--main-color);
+
+}
+header .container nav .form{
+	position: relative;
+	margin-left: 10px; 
+	border-left: 1px solid white;
+	height: 30px;
+}
+header .container nav .form i{
+	color: white;
+	position: relative;
+	top: 50%;
+	left: 15px;
+	transform: translateY(-50%);
+}
+
+header .container nav .form:hover{
+	border-color:var(--main-color);
+}
+header .container nav .form i:hover{
+	color:var(--main-color);
+}
+.landing{
+	background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/landing.jpg);
+	background-size: cover;
+	min-height: 100vh;
+	position: relative;
+	transition:background-image 0.5s esae;
+}
+.landing .overlay{
+	height: 100%;
+	width: 100%;
+	position:absolute;
+	left: 0;
+	top: 0;
+	background-color:rgb(0 0 0/50%);
+}
+.landing .text{
+	position: absolute;
+    left: 0;
+    top: 60%;
+    transform: translateY(-50%);
+    background-color: var(--secand-color);
+    display: flex;
+    justify-content: flex-end;
+    min-width: 60%;
+    color: white;
+    min-height: 50vh;
+    align-items: center;}
+.landing .text .content {
+	width:500px;
+}
+.landing .text .content h2{
+	line-height: 1.6;
+	padding-top:15px; 
+	margin-bottom: 15px;
+	font-size: 24px;
+}
+.landing .text .content p{
+	line-height: 1.6;
+	margin-bottom: 15px;
+	font-size: 20px;
+	padding-right: 10px;
+}
+
+@media(max-width:768px){
+	.landing .text{
+    display: flex;
+    justify-content: flex-end;
+    top: 60%;
+    min-width: 80%;
+    color: white;
+}
+.landing .text .content {
+	width:500px;
+	padding: 15px;
+}
+.landing .text .content h2{
+	margin-bottom: 15px;
+	font-size: 20px;
+}
+.landing .text .content p{
+	line-height: 1.6;
+	margin-bottom: 15px;
+	padding-right: 10px;
+}
+}
+@media(max-width :426px){
+	.landing .text{
+    width: 100%;
+    top: 70%;
+    color: white;
+}
+.landing .text .content {
+	padding: 15px;
+	width: 100%;
+}
+.landing .text .content h2{
+	margin-bottom:5px;
+	font-size: 20px;
+}
+.landing .text .content p{
+	margin-bottom: 5px;
+	padding-right: 10px;
+}
+}
+.landing .fa-angle-left{
+	position: absolute;
+	top: 50%;
+	left:10px;
+	color:#ddd;
+}
+.landing .fa-angle-right{
+	position: absolute;
+	top: 50%;
+	right:10px;
+	color:#ddd;
+}
+.landing .fa-angle-left:hover,
+.landing .fa-angle-right:hover{
+	color:var(--main-color);
+}
+.landing ul{
+   display: flex;
+   list-style: none;
+   flex-direction: row;
+   position: absolute;
+   bottom:20px;
+   left: 49%;
+   transform: translateX(-50%);
+}
+.landing ul li{
+	margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+@media(max-width :426px){
+.landing ul{
+		display: none;	
+}
+.landing .fa-angle-left,
+.landing .fa-angle-right{
+	display: none;
+}
+}
+.services{
+padding: var(--padding);
+margin-top: var(--margin);
+margin-bottom: var(--margin);
+}
+.services .container{
+    display: flex;
+    flex-direction: column;
+}
+.services .container .cards{
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+	grid-column-gap:20px;
+	grid-row-gap: 40px 
+}
+.services .container .cards .serv-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+}
+.services .container .cards .serv-card .text {
+	text-align: justify;
+}
+@media(max-width: 768px){
+.services .container .cards{
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+	grid-column-gap:20px;
+	grid-row-gap: 40px 
+}
+.services .container .cards .serv-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+.services .container .cards .serv-card i{
+	margin-bottom:15px;
+}
+.services .container .cards .serv-card .text{
+	text-align: center;
+}}
+.services .container .cards .serv-card i{
+	color:#777;
+	margin-right:15px
+
+}
+.services .container .cards .serv-card .text h2 {
+	margin-bottom:var(--margin);
+	color: var(--main-color);
+} 
+.services .container .cards .serv-card .text p {
+	line-height: 1.6;
+	color: #777;
+	text-align: justify;
+}
+@media(max-width: 426px){
+	.serv-card .text p {
+		padding-right: 15px;
+	}
+}
+.design{
+	background-image:url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/design-features.jpg);
+	background-size: cover;
+	position:relative;
+	width:100%;
+	min-height: 100vh;
+	display: flex;
+    align-items: flex-end;
+    overflow: hidden; 
+}
+.design .overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0 0 0 / 50%);
+}
+.design .img {
+        position: absolute;
+        bottom: -50px;
+        left:  30px
+        }
+.design ul{
+    list-style: none;
+    max-width: 50%;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    color: white;
+    bottom: 120px;
+    padding: 20px;
+    background-color: var(--secand-color);
+}
+.design ul p{
+        padding: 20px;
+}
+.design ul li{
+padding: 20px;
+margin-right:100px;
+
+}
+@media(max-width:766px){
+.design .img{
+   display: none;
+        }
+.design ul{
+        max-width: 100%;
+        padding-right: 25px;
+        bottom: 0;
+        font-size: 16px;
+}
+.design ul li{
+        margin-right: 10px
+}
+} 
+.design ul li::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f108";
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+    top: 1px;
+
+}
