@@ -80,7 +80,8 @@ body{
     background-color: white;}
 
 .h-text p{
-	font-size: 20px;
+    text-align:center;
+    font-size: 20px;
     width: 550px;
     margin: 0 auto 4rem;
     max-width: 100%;
@@ -258,7 +259,7 @@ header .container nav .form i:hover{
 @media(max-width :426px){
 	.landing .text{
     width: 100%;
-    top: 70%;
+    top: 50%;
     color: white;
 }
 .landing .text .content {
