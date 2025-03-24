@@ -423,7 +423,7 @@ margin-right:100px;
 .design ul{
         max-width: 100%;
         padding-right: 25px;
-        bottom: 0;
+        bottom: 50%;
         font-size: 16px;
 }
 .design ul li{
